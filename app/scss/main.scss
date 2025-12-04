@@ -1,0 +1,22 @@
+@import "reset"; // reset styles
+@import "fonts"; // local fonts
+@import "variables"; // variables
+// @import "animations"; // animations
+@import "global"; // global styles
+// Libraries styles:
+// @import "libs/hamburgers-settings";
+// @import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
+// BEM-blocks:
+@import "blocks/header";
+@import "blocks/footer";
+
+// -| Sticky Footer |-
+/* .wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+} */
