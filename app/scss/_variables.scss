@@ -15,10 +15,9 @@ $mobile-small-width: 360px; */
 // ==| TRANSITIONS |==
 $slow-transition: 0.7s;
 $regular-transition: 0.5s;
-// $fast-transition: 0.3s;
+$fast-transition: 0.3s;
 // ==| / TRANSITIONS |==
 // ==| GRADIENTS |==
-$purple-color-stops: #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%;
 $purple-vertical-gradient: linear-gradient(
   180deg,
   #bc10d8 0%,

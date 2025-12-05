@@ -19,11 +19,9 @@
     }
   }
 
-  &__logo {
-  }
-
   &__cart {
     @include flex-centered;
+    position: relative;
     border: none;
     background: none;
     width: 24px;
@@ -33,5 +31,27 @@
     svg {
       align-self: normal;
     }
+
+    &.header__cart--filled .header__cart-count {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__cart-count {
+    @include flex-centered;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    right: -8px;
+    bottom: -9px;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    background: $purple-vertical-gradient;
+    font-weight: 700;
+    font-size: 12px;
+    color: $white-color;
+    transition: visibility $fast-transition, opacity $fast-transition;
   }
 }
