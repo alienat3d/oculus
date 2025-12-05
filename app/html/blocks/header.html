@@ -1,13 +1,22 @@
 <header class="header">
-  <nav>
-    <a href="#shop">shop</a>
-    <a href="#games">games</a>
-    <a href="#metaverse">metaverse</a>
-  </nav>
-  <a href="/"><img src="./" alt=""></a>
-  <nav>
-    <a href="#shop">shop</a>
-    <a href="#games">games</a>
-    <a href="#metaverse">metaverse</a>
+  <nav class="container header__inner">
+    <div class="header__nav">
+      <a class="header__nav-link" href="#features">features</a>
+      <a class="header__nav-link" href="#games">games</a>
+      <a class="header__nav-link" href="#in-the-box">In the box</a>
+    </div>
+    <a class="header__logo" href="/">
+      <img src="./img/logo.svg" alt="Oculus logo">
+    </a>
+    <div class="header__nav">
+      <a class="header__nav-link" href="#metaverse">metaverse</a>
+      <a class="header__nav-link" href="#shop">shop</a>
+      <a class="header__nav-link" href="#subscribe">subscribe</a>
+    </div>
+    <button class="header__cart" type="button">
+      <svg>
+        <use xlink:href="./img/icons/sprite.svg#shopping-bag"></use>
+      </svg>
+    </button>
   </nav>
 </header>

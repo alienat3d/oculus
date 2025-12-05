@@ -1,13 +1,9 @@
 // COLORS
-/* $dark-color: #333;
-$btn-text-color: #272727;
-$accent-color: #7b6152;
-$bright-accent-color: #ffbd59;
-$beige-color: #fafafa;
-$light-taupe: #bea495; */
+$white-color: #f6f4f5;
+$border-color: #cacad6;
+$text-color: #5c5c5e;
+$title-color: #070707;
 // -| backgrounds |-
-/* $alt-bg-color: #a5978e;
-$main-bg-color: #fff8f3; */
 // END COLORS
 // ==| VIEWPORTS |==
 /* $desktop-width: 1440px;
@@ -17,22 +13,22 @@ $mobile-large-width: 480px;
 $mobile-small-width: 360px; */
 // ==| / VIEWPORTS |==
 // ==| TRANSITIONS |==
-/* $slow-transition: 0.7s;
+$slow-transition: 0.7s;
 $regular-transition: 0.5s;
-$fast-transition: 0.3s; */
+// $fast-transition: 0.3s;
 // ==| / TRANSITIONS |==
-// ==| FONTS |==
-/* @mixin main-font-400 {
-  font-family: "Comfortaa", cursive;
-  font-weight: 400;
+// ==| GRADIENTS |==
+$purple-color-stops: #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%;
+$purple-vertical-gradient: linear-gradient(
+  180deg,
+  #bc10d8 0%,
+  rgba(80, 0, 250, 0.93) 100%
+);
+// ==| / GRADIENTS |==
+// ==| MIXINS |==
+@mixin flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-@mixin main-font-600 {
-  font-family: "Comfortaa", cursive;
-  font-weight: 600;
-}
-
-@mixin title-font-400 {
-  font-family: "Yeseva One", cursive;
-  font-weight: 400;
-} */
-// ==| / FONTS |==
+// ==| / MIXINS |==

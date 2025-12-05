@@ -64,47 +64,45 @@ function scss() {
 }
 
 function js() {
-  return (
-    src(sourceFolder + "/js/main.js")
-      .pipe(sourcemaps.init())
-      .pipe(
-        webpackStream({
-          mode: "none",
-          // mode: "production",
-          output: {
-            filename: "main.min.js",
-          },
-          module: {
-            rules: [
-              {
-                test: /\.m?js$/,
-                exclude: /node_modules/,
-                use: {
-                  loader: "babel-loader",
-                  options: {
-                    presets: [["@babel/preset-env", { targets: "defaults" }]],
-                  },
+  return src(sourceFolder + "/js/main.js")
+    .pipe(sourcemaps.init())
+    .pipe(
+      webpackStream({
+        mode: "none",
+        // mode: "production",
+        output: {
+          filename: "main.min.js",
+        },
+        module: {
+          rules: [
+            {
+              test: /\.m?js$/,
+              exclude: /node_modules/,
+              use: {
+                loader: "babel-loader",
+                options: {
+                  presets: [["@babel/preset-env", { targets: "defaults" }]],
                 },
               },
-              {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"],
+            },
+            {
+              test: /\.css$/,
+              use: ["style-loader", "css-loader"],
+            },
+            {
+              test: /\.(gif|png|jpe?g|svg|ico)$/i,
+              type: "asset/resource",
+              generator: {
+                filename: "img/[name][ext]", // Put assets in an images folder
               },
-              {
-                test: /\.(gif|png|jpe?g|svg|ico)$/i,
-                type: "asset/resource",
-                generator: {
-                  filename: "img/[name][ext]", // Put assets in an images folder
-                },
-              },
-            ],
-          },
-        })
-      )
-      // .pipe(uglify())
-      .pipe(sourcemaps.write())
-      .pipe(dest(buildFolder + "/js"))
-  );
+            },
+          ],
+        },
+      })
+    )
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(dest(buildFolder + "/js"));
 }
 
 function img() {

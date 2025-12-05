@@ -8,17 +8,17 @@
 }
 *::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  border: 3px solid $main-bg-color;
-  background-color: $accent-color;
+  border: 3px solid $white-color;
+  background-color: $border-color;
   transition: all 0.5s linear;
 
   &:active {
-    background-color: $bright-accent-color;
+    background-color: $text-color;
   }
 }
 *::-webkit-scrollbar-track {
   border-radius: 16px;
-  background-color: $main-bg-color;
+  background-color: $white-color;
 }
 
 button {
@@ -28,18 +28,17 @@ button {
 }
 
 body {
-  /*   @include main-font-400;
-  position: relative;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
   min-width: 320px;
-  background-color: $main-bg-color;
-  font-size: 14px;
-  line-height: 1.2;
-  color: #000; */
+  font-size: 16px;
+  line-height: auto;
+  color: $text-color;
 }
 
 .container {
   margin: 0 auto;
-  // max-width: 1160px;
+  max-width: 1200px;
 
   /*   @media (max-width: 1230px) {
     padding: 0 4%;

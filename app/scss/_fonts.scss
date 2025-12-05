@@ -1,20 +1,29 @@
 // === Comfortaa ===
-/* @font-face {
-  font-family: "Comfortaa";
+@font-face {
+  font-family: "Helvetica";
   font-weight: 400;
   font-style: normal;
-  src: local("Comfortaa-Regular"), local("Comfortaa Regular"),
-    url("../fonts/comfortaa-regular.woff2") format("woff2"),
-    url("../fonts/comfortaa-regular.woff") format("woff");
+  src: local("Helvetica-Regular"), local("Helvetica Regular"),
+    url("../fonts/helvetica-regular.woff2") format("woff2"),
+    url("../fonts/helvetica-regular.woff") format("woff");
   font-display: swap;
 }
 @font-face {
-  font-family: "Comfortaa";
-  font-weight: 600;
+  font-family: "Helvetica";
+  font-weight: 700;
   font-style: normal;
-  src: local("Comfortaa-SemiBold"), local("Comfortaa SemiBold"),
-    url("../fonts/comfortaa-semibold.woff2") format("woff2"),
-    url("../fonts/comfortaa-semibold.woff") format("woff");
+  src: local("Helvetica-Bold"), local("Helvetica Bold"),
+    url("../fonts/helvetica-bold.woff2") format("woff2"),
+    url("../fonts/helvetica-bold.woff") format("woff");
   font-display: swap;
 }
- */
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Inter-Bold"), local("Inter Bold"),
+    url("../fonts/inter-28pt-bold.woff2") format("woff2"),
+    url("../fonts/inter-28pt-bold.woff") format("woff");
+  font-display: swap;
+}
