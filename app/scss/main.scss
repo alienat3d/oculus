@@ -1,14 +1,21 @@
 @import "reset"; // reset styles
 @import "fonts"; // local fonts
 @import "variables"; // variables
+@import "mixins"; // mixins
 // @import "animations"; // animations
 @import "global"; // global styles
-// Libraries styles:
+
+// -| Libraries styles |-
 // @import "libs/hamburgers-settings";
 // @import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
-// BEM-blocks:
+
+// -| Reusable blocks |-
+@import "blocks/tabs";
+
+// -| Page blocks |-
 @import "blocks/header";
 @import "blocks/hero";
+@import "blocks/features";
 @import "blocks/footer";
 
 // -| Sticky Footer |-

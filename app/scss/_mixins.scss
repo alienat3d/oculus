@@ -1,0 +1,33 @@
+// ==| MIXINS |==
+@mixin main-font-bold {
+  font-family: "Helvetica-Bold", sans-serif;
+  font-weight: 700;
+}
+@mixin decor-font-bold {
+  font-family: "Inter-Bold", sans-serif;
+  font-weight: 700;
+}
+
+@mixin flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin inline-bg-image {
+  background-color: #7e7ea7;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin bg-purple-gradient($angle) {
+  background: linear-gradient($angle, $purple-gradient-colors);
+}
+
+@mixin text-color-gradient {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

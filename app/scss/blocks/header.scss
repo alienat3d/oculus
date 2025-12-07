@@ -40,6 +40,7 @@
 
   &__cart-count {
     @include flex-centered;
+    @include bg-purple-gradient(180deg);
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -48,8 +49,6 @@
     border-radius: 50%;
     width: 18px;
     height: 18px;
-    background: $purple-vertical-gradient;
-    font-weight: 700;
     font-size: 12px;
     color: $white-color;
     transition: visibility $fast-transition, opacity $fast-transition;

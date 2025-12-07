@@ -24,7 +24,7 @@
     overflow: hidden;
     margin-bottom: 10px;
     border: 1px solid transparent;
-    border-image: $purple-vertical-gradient 1;
+    border-image: linear-gradient(180deg, $purple-gradient-colors) 1;
     display: flex;
     height: 62px;
     width: 598px;
@@ -32,13 +32,13 @@
 
     &::before {
       content: "";
+      @include bg-purple-gradient(180deg);
       z-index: 1;
       position: absolute;
       top: 0;
       left: 0;
       width: 50%;
       height: 100%;
-      background: $purple-vertical-gradient;
       transition: transform $slow-transition ease;
       transform: translateX(0);
     }

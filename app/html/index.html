@@ -2,83 +2,200 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Oculus</title>
-	<link href="./css/main.min.css" rel="stylesheet">
-	<script defer src="./js/main.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oculus</title>
+  <link href="./css/main.min.css" rel="stylesheet">
+  <script defer src="./js/main.min.js"></script>
 </head>
 
 <body>
-	<!-- === HEADER === -->
-	@@include('blocks/header.html')
-	<!-- === / HEADER === -->
+  <!-- === HEADER === -->
+  @@include('blocks/header.html')
+  <!-- === / HEADER === -->
 
-	<main class="main">
-		<!-- === HERO === -->
-		<section class="hero">
-			<div class="container">
-				<h1 class="hero__title">Meta Quest 2</h1>
-				<div class="hero__subtitle">Get an Elite Strap free</div>
-				<div class="hero__subsubtitle">For a limited time only, save $59.99 USD. Offer ends 1/19/26</div>
-				<div class="hero__buy-button-group">
-					<a class="hero__buy-button" href="#">buy now</a>
-					<span class="hero__buy-button-price">399,99 USD</span>
-				</div>
-				<div class="hero__button-subtitle">Meta Quest 2 is for ages 13+</div>
-			</div>
-		</section>
-		<!-- === / HERO === -->
-		<!-- ===  === -->
-		<section class="">
-			<div class="container"></div>
-		</section>
-		<!-- === /  === -->
-		<!-- ===  === -->
-		<section class="">
-			<div class="container"></div>
-		</section>
-		<!-- === /  === -->
-		<!-- ===  === -->
-		<section class="">
-			<div class="container"></div>
-		</section>
-		<!-- === /  === -->
-		<!-- ===  === -->
-		<section class="">
-			<div class="container"></div>
-		</section>
-		<!-- === /  === -->
-		<!-- ===  === -->
-		<section class="">
-			<div class="container"></div>
-		</section>
-		<!-- === /  === -->
-		<!-- ===  === -->
-		<section class="">
-			<div class="container"></div>
-		</section>
-		<!-- === /  === -->
-		<!-- ===  === -->
-		<section class="">
-			<div class="container"></div>
-		</section>
-		<!-- === /  === -->
-		<!-- ===  === -->
-		<section class="">
-			<div class="container"></div>
-		</section>
-		<!-- === /  === -->
-		<!-- ===  === -->
-		<section class="">
-			<div class="container"></div>
-		</section>
-		<!-- === /  === -->
-	</main>
+  <main class="main">
+    <!-- === HERO === -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Meta Quest 2</h1>
+        <div class="hero__subtitle">Get an Elite Strap free</div>
+        <div class="hero__subsubtitle">For a limited time only, save $59.99 USD. Offer ends 1/19/26</div>
+        <div class="hero__buy-button-group">
+          <a class="hero__buy-button" href="#">buy now</a>
+          <span class="hero__buy-button-price">399,99 USD</span>
+        </div>
+        <div class="hero__button-subtitle">Meta Quest 2 is for ages 13+</div>
+      </div>
+    </section>
+    <!-- === / HERO === -->
+    <!-- === FEATURES === -->
+    <section class="features">
+      <div class="container">
+        <div class="features__titles">
+          <h2 class="features__title title">product features</h2>
+          <div class="features__text">Easy to set up and safe to use</div>
+        </div>
+        <div class="features__tabs tabs">
+          <div class="tabs__buttons-group">
+            <button class="tabs__button active" type="tabs__button" data-button="content-1">01 Graphics</button>
+            <button class="tabs__button" type="tabs__button" data-button="content-2">02 Controls</button>
+            <button class="tabs__button" type="tabs__button" data-button="content-3">03 Processor</button>
+            <button class="tabs__button" type="tabs__button" data-button="content-4">04 Set up your play area</button>
+            <button class="tabs__button" type="tabs__button" data-button="content-5">05 Guardian activity</button>
+            <button class="tabs__button" type="tabs__button" data-button="content-6">06 Headset casting</button>
+          </div>
+          <div class="tabs__content">
+            <!-- Tab #1 -->
+            <div id="content-1" class="tabs__content-item active">
+              <div class="tabs__content-img" style="background-image: url('./img/features/graphics-1.jpg')"></div>
+              <div class="tabs__content-text-box">
+                <h3 class="tabs__content-title">Graphics</h3>
+                <p class="tabs__content-text">
+                  With 1832 x 1920 pixels per eye, everything from multiplayer games and
+                  productivity apps to 360 0 videos look beyond incredible
+                </p>
+              </div>
+              <div class="tabs__content-video-box" style="background-image: url('./img/features/graphics-2.jpg')">
+                <div class="tabs__content-video-button-box hovered">
+                  <button class="tabs__content-video-button"></button>
+                  Watch the video
+                </div>
+              </div>
+            </div>
+            <!-- Tab #2 -->
+            <div id="content-2" class="tabs__content-item">
+              <div class="tabs__content-img" style="background-image: url('./img/features/graphics-1.jpg')"></div>
+              <div class="tabs__content-text-box">
+                <h3 class="tabs__content-title">Controls</h3>
+                <p class="tabs__content-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dolore eveniet alias esse
+                  dolores vero officiis architecto commodi quo animi saepe ea quos praesentium, repellendus odit,
+                  nesciunt possimus optio aspernatur.
+                </p>
+              </div>
+              <div class="tabs__content-video-box" style="background-image: url('./img/features/graphics-2.jpg')">
+                <div class="tabs__content-video-button-box hovered">
+                  <button class="tabs__content-video-button"></button>
+                  Watch the video
+                </div>
+              </div>
+            </div>
+            <!-- Tab #3 -->
+            <div id="content-3" class="tabs__content-item">
+              <div class="tabs__content-img" style="background-image: url('./img/features/graphics-1.jpg')"></div>
+              <div class="tabs__content-text-box">
+                <h3 class="tabs__content-title">Processor</h3>
+                <p class="tabs__content-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, rem.
+                </p>
+              </div>
+              <div class="tabs__content-video-box" style="background-image: url('./img/features/graphics-2.jpg')">
+                <div class="tabs__content-video-button-box hovered">
+                  <button class="tabs__content-video-button"></button>
+                  Watch the video
+                </div>
+              </div>
+            </div>
+            <!-- Tab #4 -->
+            <div id="content-4" class="tabs__content-item">
+              <div class="tabs__content-img" style="background-image: url('./img/features/graphics-1.jpg')"></div>
+              <div class="tabs__content-text-box">
+                <h3 class="tabs__content-title">Set up your play area</h3>
+                <p class="tabs__content-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab atque ratione fugiat qui nulla pariatur.
+                </p>
+              </div>
+              <div class="tabs__content-video-box" style="background-image: url('./img/features/graphics-2.jpg')">
+                <div class="tabs__content-video-button-box hovered">
+                  <button class="tabs__content-video-button"></button>
+                  Watch the video
+                </div>
+              </div>
+            </div>
+            <!-- Tab #5 -->
+            <div id="content-5" class="tabs__content-item">
+              <div class="tabs__content-img" style="background-image: url('./img/features/graphics-1.jpg')"></div>
+              <div class="tabs__content-text-box">
+                <h3 class="tabs__content-title">Guardian activity</h3>
+                <p class="tabs__content-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repudiandae reprehenderit magnam eos
+                  ipsam, optio voluptatum incidunt nobis, est qui sed necessitatibus assumenda alias voluptates.
+                </p>
+              </div>
+              <div class="tabs__content-video-box" style="background-image: url('./img/features/graphics-2.jpg')">
+                <div class="tabs__content-video-button-box hovered">
+                  <button class="tabs__content-video-button"></button>
+                  Watch the video
+                </div>
+              </div>
+            </div>
+            <!-- Tab #6 -->
+            <div id="content-6" class="tabs__content-item">
+              <div class="tabs__content-img" style="background-image: url('./img/features/graphics-1.jpg')"></div>
+              <div class="tabs__content-text-box">
+                <h3 class="tabs__content-title">Headset casting</h3>
+                <p class="tabs__content-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur dolor magni exercitationem?
+                </p>
+              </div>
+              <div class="tabs__content-video-box" style="background-image: url('./img/features/graphics-2.jpg')">
+                <div class="tabs__content-video-button-box hovered">
+                  <button class="tabs__content-video-button"></button>
+                  Watch the video
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- === / FEATURES === -->
+    <!-- ===  === -->
+    <section class="">
+      <div class="container"></div>
+    </section>
+    <!-- === /  === -->
+    <!-- ===  === -->
+    <section class="">
+      <div class="container"></div>
+    </section>
+    <!-- === /  === -->
+    <!-- ===  === -->
+    <section class="">
+      <div class="container"></div>
+    </section>
+    <!-- === /  === -->
+    <!-- ===  === -->
+    <section class="">
+      <div class="container"></div>
+    </section>
+    <!-- === /  === -->
+    <!-- ===  === -->
+    <section class="">
+      <div class="container"></div>
+    </section>
+    <!-- === /  === -->
+    <!-- ===  === -->
+    <section class="">
+      <div class="container"></div>
+    </section>
+    <!-- === /  === -->
+    <!-- ===  === -->
+    <section class="">
+      <div class="container"></div>
+    </section>
+    <!-- === /  === -->
+    <!-- ===  === -->
+    <section class="">
+      <div class="container"></div>
+    </section>
+    <!-- === /  === -->
+  </main>
 
-	<!-- === FOOTER === -->
-	@@include('blocks/footer.html')
-	<!-- === / FOOTER === -->
+  <!-- === FOOTER === -->
+  @@include('blocks/footer.html')
+  <!-- === / FOOTER === -->
 </body>
 
 </html>

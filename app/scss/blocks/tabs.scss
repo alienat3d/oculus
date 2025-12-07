@@ -1,0 +1,113 @@
+.tabs {
+  display: grid;
+  grid-template-columns: 300px auto;
+
+  &__buttons-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__button {
+    @include main-font-bold;
+    font-size: 16px;
+
+    & + & {
+      margin-top: 10px;
+    }
+
+    &.active {
+      color: $title-color;
+    }
+  }
+
+  &__content {
+    min-height: 300px;
+  }
+
+  &__content-item {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    display: grid;
+    grid-template-columns: auto 280px;
+    grid-template-rows: auto 150px;
+    gap: 36px 40px;
+    transition: all $slow-transition;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__content-img {
+    @include inline-bg-image;
+    grid-row: 1 / -1;
+    align-self: stretch;
+    width: 580px;
+    height: 300px;
+  }
+
+  &__content-text-box {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  &__content-title {
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  &__content-text {
+  }
+
+  &__content-video-box {
+    @include inline-bg-image;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: flex-end;
+    width: 280px;
+    height: 150px;
+  }
+
+  &__content-video-button-box {
+    padding-bottom: 10px;
+    padding-left: 9px;
+    width: fit-content;
+    font-size: 14px;
+    color: $white-color;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),
+      1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  &__content-video-button {
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    margin: 0 auto 8px;
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: $white-color;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 54%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 13px;
+      aspect-ratio: cos(30deg);
+      clip-path: polygon(0 0, 100% 50%, 0 100%);
+      background-color: $text-color;
+    }
+
+    &:hover::after {
+      @include bg-purple-gradient(270deg);
+    }
+  }
+}
