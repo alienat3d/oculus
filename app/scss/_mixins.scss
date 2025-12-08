@@ -25,6 +25,11 @@
   background: linear-gradient($angle, $purple-gradient-colors);
 }
 
+@mixin border-color-gradient {
+  border: 1px solid transparent;
+  border-image: linear-gradient(180deg, $purple-gradient-colors) 1;
+}
+
 @mixin text-color-gradient {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

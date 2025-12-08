@@ -1,4 +1,7 @@
 .features {
+  padding-top: 100px;
+  padding-bottom: 50px;
+
   &__titles {
     margin-bottom: 20px;
     display: flex;
@@ -11,13 +14,6 @@
   }
 
   &__text {
-    @include bg-purple-gradient(180deg);
-    @include text-color-gradient;
     flex-basis: 330px;
-    text-transform: uppercase;
-    font-size: 36px;
-  }
-
-  &__tabs {
   }
 }

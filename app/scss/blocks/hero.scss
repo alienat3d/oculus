@@ -20,11 +20,10 @@
   }
 
   &__buy-button-group {
+    @include border-color-gradient;
     position: relative;
     overflow: hidden;
     margin-bottom: 10px;
-    border: 1px solid transparent;
-    border-image: linear-gradient(180deg, $purple-gradient-colors) 1;
     display: flex;
     height: 62px;
     width: 598px;

@@ -1,0 +1,55 @@
+.games {
+  display: grid;
+  grid-template-columns: 300px auto;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+  }
+
+  &__description-text {
+    margin-bottom: 30px;
+  }
+
+  &__see-all-button {
+    @include main-font-bold;
+    @include border-color-gradient;
+    @include bg-purple-gradient(180deg);
+    @include text-color-gradient;
+    overflow: hidden;
+    position: relative;
+    padding: 16px 47px 14px 46px;
+    text-transform: uppercase;
+
+    &::after {
+      @include bg-purple-gradient(180deg);
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-101%);
+      transition: transform $slow-transition ease,
+        text-fill-color $regular-transition;
+    }
+    &:hover {
+      background: none !important;
+      -webkit-background-clip: initial;
+      -webkit-text-fill-color: $white-color;
+      background-clip: initial;
+      text-fill-color: $white-color;
+    }
+    &:hover::after {
+      transform: translateX(0);
+    }
+  }
+
+  &__cards {
+    display: flex;
+  }
+}
