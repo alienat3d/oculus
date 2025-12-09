@@ -132,13 +132,7 @@ function fonts() {
 }
 
 function misc() {
-  return src([
-    sourceFolder + "/misc/**/*.*",
-    // 🚨 EXCLUDE common video and binary formats from processing
-    "!" +
-      sourceFolder +
-      "/misc/**/*.{mp4,webm,mov,avi,mkv,gif,jpg,png,jpeg,webp}",
-  ])
+  return src(sourceFolder + "/misc/**/*.*")
     .pipe(cachebust({ type: "timestamp" }))
     .pipe(dest(buildFolder));
 }
