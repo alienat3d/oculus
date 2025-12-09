@@ -1,6 +1,7 @@
 export default function handleTabs() {
   const tabsButtons = document.querySelectorAll(".tabs__button");
-  const tabsContents = document.querySelectorAll(".tabs__content-item");
+  const contentContainer = document.querySelector(".tabs__content");
+  const tabsContents = contentContainer.querySelectorAll(".tabs__content-item");
 
   const showContent = (evt) => {
     const targetTab = evt.currentTarget;
@@ -21,6 +22,10 @@ export default function handleTabs() {
 
     targetTab.classList.add("active");
     currentContent.classList.add("active");
+
+    if (currentContent.clientHeight === contentContainer.clientHeight) return;
+
+    contentContainer.style.height = `${currentContent.clientHeight}px`;
   };
 
   tabsButtons.forEach((button) =>
