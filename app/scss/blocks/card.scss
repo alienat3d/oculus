@@ -3,6 +3,7 @@
   padding: 20px 16px;
   display: flex;
   flex-direction: column;
+  flex-basis: 300px;
   min-height: 500px;
 
   &:hover &__cover-image::after {

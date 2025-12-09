@@ -106,7 +106,7 @@ function js() {
 }
 
 function img() {
-  return src(sourceFolder + "/img/**/*.{png,jpg}")
+  return src(sourceFolder + "/img/**/*.{png,jpg,webp}")
     .pipe(dest(buildFolder + "/img"))
     .pipe(
       squoosh(() => ({
