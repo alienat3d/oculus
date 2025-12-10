@@ -22,6 +22,7 @@
     overflow: hidden;
     position: relative;
     padding: 16px 47px 14px 46px;
+    min-width: 225px;
     text-transform: uppercase;
 
     &::after {
@@ -49,8 +50,24 @@
     }
   }
 
-  &__cards {
-    display: flex;
+  &__initialized,
+  &__hidden-content {
     flex-wrap: wrap;
+  }
+
+  &__initialized {
+    display: flex;
+  }
+
+  &__hidden-content {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    transition: all $fast-transition ease-out;
+
+    &.visible {
+      opacity: 1;
+      max-height: max-content;
+    }
   }
 }
