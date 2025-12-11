@@ -2,9 +2,8 @@ import * as basicLightbox from "basiclightbox";
 import "basiclightbox/dist/basicLightbox.min.css";
 
 export default function basicLightboxSettings() {
-  const triggerButtons = document.querySelectorAll(
-    ".tabs__content-video-button"
-  );
+  const triggerButtons = document.querySelectorAll("button[data-video-id]");
+  console.log("triggerButtons", triggerButtons);
 
   const showVideo = (index) => {
     const videoId = triggerButtons[index].dataset.videoId;
