@@ -25,11 +25,18 @@ function html() {
   return (
     src(sourceFolder + "/html/**/*.html")
       .pipe(include())
-      .pipe(webpAvifHTML())
       // .pipe(gulpHtmlBemValidator())
       .pipe(cachebust({ type: "timestamp" }))
       .pipe(dest(buildFolder))
   );
+}
+
+function productionHtml() {
+  return src(sourceFolder + "/html/**/*.html")
+    .pipe(include())
+    .pipe(webpAvifHTML())
+    .pipe(cachebust({ type: "timestamp" }))
+    .pipe(dest(buildFolder));
 }
 
 function bem() {
@@ -184,7 +191,7 @@ exports.build = series(
   svg,
   sprite,
   fonts,
-  html,
+  productionHtml,
   misc,
   clearBlocksDir
 );

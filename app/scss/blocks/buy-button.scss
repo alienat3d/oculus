@@ -9,7 +9,7 @@
 
   &::before {
     content: "";
-    @include bg-purple-gradient(180deg);
+    @include bg-purple-gradient;
     position: absolute;
     top: 0;
     left: 0;

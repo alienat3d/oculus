@@ -50,7 +50,8 @@ body {
 
 // ==| WHITESPACE |==
 .games,
-.call-to-action {
+.call-to-action,
+.in-the-box {
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -62,7 +63,7 @@ body {
 }
 
 .gradient-colors-title {
-  @include bg-purple-gradient(180deg);
+  @include bg-purple-gradient;
   @include text-color-gradient;
   text-transform: uppercase;
   font-size: 36px;

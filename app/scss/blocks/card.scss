@@ -5,6 +5,11 @@
   flex-direction: column;
   flex-basis: 300px;
   min-height: 500px;
+  transition: border-width $fast-transition;
+
+  &.hovered {
+    outline: 2px solid #5000fa;
+  }
 
   &:hover &__cover-image::after {
     background-color: rgba(#000, 0);
@@ -41,8 +46,13 @@
   }
 
   &__button {
-    @include bg-purple-gradient(180deg);
+    @include bg-purple-gradient(80%);
     @include text-color-gradient;
     margin-top: auto;
+    width: fit-content;
+
+    &:hover {
+      font-weight: 700;
+    }
   }
 }

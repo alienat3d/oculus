@@ -107,7 +107,11 @@
     }
 
     &:hover::after {
-      @include bg-purple-gradient(270deg);
+      background: linear-gradient(
+        270deg,
+        #bc10d8 0%,
+        rgba(80, 0, 250, 0.93) 100%
+      );
     }
 
     &:active {

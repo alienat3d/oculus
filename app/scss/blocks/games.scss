@@ -17,7 +17,7 @@
   &__see-all-button {
     @include main-font-bold;
     @include border-color-gradient;
-    @include bg-purple-gradient(180deg);
+    @include bg-purple-gradient;
     @include text-color-gradient;
     overflow: hidden;
     position: relative;
@@ -26,7 +26,7 @@
     text-transform: uppercase;
 
     &::after {
-      @include bg-purple-gradient(180deg);
+      @include bg-purple-gradient;
       content: "";
       z-index: -1;
       position: absolute;
@@ -35,15 +35,14 @@
       bottom: 0;
       left: 0;
       transform: translateX(-101%);
-      transition: transform $slow-transition ease,
-        text-fill-color $regular-transition;
+      transition: all $slow-transition ease;
     }
     &:hover {
       background: none !important;
       -webkit-background-clip: initial;
       -webkit-text-fill-color: $white-color;
       background-clip: initial;
-      text-fill-color: $white-color;
+      text-emphasis-color: $white-color;
     }
     &:hover::after {
       transform: translateX(0);
