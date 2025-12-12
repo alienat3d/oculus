@@ -15,15 +15,15 @@
 }
 
 @mixin inline-bg-image {
-  background-color: #7e7ea7;
+  background-color: $images-bg-color;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
 }
 
-@mixin bg-purple-gradient($purple-depth: 100%) {
+@mixin bg-purple-gradient($angle: 180deg, $purple-depth: 100%) {
   background: linear-gradient(
-    180deg,
+    $angle,
     #bc10d8 0%,
     rgba(80, 0, 250, 0.93) $purple-depth
   );

@@ -63,7 +63,7 @@
   }
 
   &__button {
-    @include bg-purple-gradient(80%);
+    @include bg-purple-gradient(180deg, 80%);
     @include text-color-gradient;
     margin-top: auto;
     width: fit-content;

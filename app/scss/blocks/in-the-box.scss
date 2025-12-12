@@ -16,7 +16,7 @@
   }
 
   &__content-title {
-    @include bg-purple-gradient(40%);
+    @include bg-purple-gradient(180deg, 40%);
     @include text-color-gradient;
   }
 

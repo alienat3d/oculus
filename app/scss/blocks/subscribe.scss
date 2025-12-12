@@ -1,0 +1,88 @@
+.subscribe {
+  &__title {
+    margin-bottom: 9px;
+    font-weight: 400;
+    font-size: 24px;
+    color: $title-color;
+  }
+
+  &__form {
+    position: relative;
+    margin-bottom: 10px;
+    width: 600px;
+  }
+
+  &__form-input {
+    @include main-font-bold;
+    @include bg-purple-gradient(90deg, 15%);
+    @include text-color-gradient;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $border-color;
+    padding: 22px 61px 19px 10px;
+    width: 600px;
+    font-size: 16px;
+    transition: border-color $regular-transition ease;
+
+    .subscribe .enabled & {
+      border-bottom-color: transparent;
+      border-image: linear-gradient(
+          90deg,
+          #bc10d8 0%,
+          rgba(80, 0, 250, 0.93) 100%
+        )
+        1;
+    }
+  }
+
+  &__button {
+    @include main-font-bold;
+    @include bg-purple-gradient(90deg);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1px;
+    border-radius: 50%;
+    padding-top: 2px;
+    width: 50px;
+    height: 50px;
+    text-transform: uppercase;
+    color: $white-color;
+    transition: transform $fast-transition ease-in;
+
+    &:disabled {
+      cursor: default;
+      background: transparent;
+      background-color: $border-color;
+      color: $text-color;
+    }
+    &:hover {
+      transform: translateY(-50%) scale(1.15);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__tnc {
+    flex-basis: 600px;
+  }
+
+  &__tnc-link,
+  &__email-link {
+    &:hover {
+      @include bg-purple-gradient;
+      @include text-color-gradient;
+    }
+  }
+
+  &__tnc-link {
+    padding-right: 1px;
+  }
+
+  &__email-link {
+  }
+}
