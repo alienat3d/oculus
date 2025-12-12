@@ -474,10 +474,10 @@
     <section class="subscribe">
       <div class="container">
         <h2 class="subscribe__title">Get news and updates</h2>
-        <form class="subscribe__form enabled">
+        <form class="subscribe__form">
           <input id="subscribe-email" name="subscribe-email" class="subscribe__form-input" type="email"
             placeholder="E-mail" required autocomplete="email">
-          <button class="subscribe__button" type="submit">go</button>
+          <button class="subscribe__button" type="submit" disabled>go</button>
         </form>
         <div class="subscribe__bottom">
           <p class="subscribe__tnc">
@@ -498,6 +498,9 @@
   <!-- === FOOTER === -->
   @@include('blocks/footer.html')
   <!-- === / FOOTER === -->
+  <!-- === MODAL === -->
+  @@include('blocks/modal.html')
+  <!-- === / MODAL === -->
 </body>
 
 </html>

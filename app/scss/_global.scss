@@ -22,6 +22,7 @@
 }
 
 body {
+  position: relative;
   font-family: "Helvetica", sans-serif;
   font-weight: 400;
   min-width: 320px;
@@ -32,6 +33,32 @@ body {
 input,
 textarea {
   caret-color: rgba(80, 0, 250);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  /* 1. Reset the text color to your desired color */
+  // @include main-font-bold;
+
+  -webkit-text-fill-color: rgba(80, 0, 250, 0.93);
+
+  /* 2. Reset the background color using box-shadow (The Trick!) */
+  /* The color must match your desired background color (e.g., white or transparent) */
+  /* The shadow dimensions (0 0 0 1000px) ensure the shadow covers the entire input field */
+  // box-shadow: 0 0 0 1000px white inset !important;
+
+  /* 3. Transition fix (optional but recommended for consistency) */
+  transition: background-color 5000s ease-in-out 0s;
+
+  /* 4. Reset other styles if necessary */
+  /* background-image: none !important; */
 }
 
 .container {
