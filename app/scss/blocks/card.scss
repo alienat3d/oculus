@@ -3,8 +3,12 @@
   padding: 20px 16px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-basis: 300px;
-  min-height: 500px;
+  height: -webkit-fill-available;
+  min-height: 520px;
+  flex-grow: 1;
+
   transition: border-width $fast-transition;
 
   &.hovered {
@@ -33,16 +37,29 @@
       transition: $slow-transition ease;
     }
   }
+  .accessories &__cover-image {
+    background-color: transparent;
+
+    &::after {
+      display: none;
+    }
+  }
 
   &__title {
     margin-bottom: 10px;
     font-weight: 400;
     font-size: 24px;
+    height: 56px;
     color: $title-color;
   }
 
   &__description {
     margin-bottom: 10px;
+  }
+
+  &__price {
+    margin-top: auto;
+    color: $title-color;
   }
 
   &__button {
@@ -54,5 +71,13 @@
     &:hover {
       font-weight: 700;
     }
+  }
+  .accessories &__button {
+    @include main-font-bold;
+    @include border-color-gradient;
+    margin-top: 20px;
+    padding: 6px 10px 4px;
+    width: 100%;
+    text-transform: uppercase;
   }
 }

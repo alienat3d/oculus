@@ -5,7 +5,8 @@
 @import "animations"; // animations
 @import "global"; // global styles
 
-// -| Libraries styles |-
+// -| Restyling vendor libraries |-
+@import "libs/swiper";
 // @import "libs/hamburgers-settings";
 // @import "../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
 
@@ -22,6 +23,7 @@
 @import "blocks/call-to-action";
 @import "blocks/in-the-box";
 @import "blocks/promo-banner";
+@import "blocks/accessories";
 @import "blocks/footer";
 
 // -| Sticky Footer |-
